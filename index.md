@@ -89,3 +89,8 @@ One of the best parts about Github is that you can view how other people set up 
 - [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
 
 To watch the BSE tutorial on how to create a portfolio, click here.
+
+# Starter Project
+The starter project I did was the Retro Arcade Console. It was a soldering heavy project that had many interesting steps and components. First I attached the USB socket(Serves as the power source) and the Dot matrix(the screen) with soldering. Then I attached many other important components like the capacitors, buzzer and power switch. After, I attached the keys and the timers and also added a battery option for power. The console has the calssic game tetris and it was pretty good for such a small console. 
+
+![Headstone Image](logo.svg)
