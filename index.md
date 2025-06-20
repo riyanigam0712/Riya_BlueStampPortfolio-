@@ -46,17 +46,27 @@ For your second milestone, explain what you've worked on since your previous mil
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bZwton4v0_g?si=MIdvZNEX-xEZbMlO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-My project that is the smart glasses I am using a rasberry pi annd it's desognated caerma to perform object regontiiton. Right now I set up the raberry pi and got the camera to take pictures. 
-I accomplished my first milestone which entailed: 
-Insert the Micro-SD card into the USB reader and plug it into your computer
-Do the imaging for the sd card - duplicate their configured Raspberry Pi setups, back up their systems, or quickly deploy the same OS and software on multiple devices
-Enable (SSH (Secure Shell) lets you remotely control your Raspberry Pi from another computer without needing a monitor, keyboard, or mouse connected to the Pi) 
+My project that is the smart glasses I am using a rasberry pi and it's designated camera to perform object regontiiton and then attaching on to the glasses. For my milestone I Set up and connected to the Raspberry Pi to take a picture./
+This entailed: 
+
+Inserting the Micro-SD card into the USB reader and plug it into your computer
+
+Do the imaging for the sd card which means duplicate their configured Raspberry Pi setups, back up their systems, or quickly deploy the same OS and software on multiple devices
+
+Enable (SSH (Secure Shell) which lets you remotely control your Raspberry Pi from another computer without needing a monitor, keyboard, or mouse connected to the Pi) 
+
 Run terminal commands from my PC
+
 Edit code via VS Code
+
 Transfer files between Pi and my computer
+
 Insert the SD card into the Raspberry Pi., Put Raspberry Pi into the case
+
 Monitor Setup via OBS and Connect the Raspberry Pi to your PC using the HDMI capture card
+
 enable SSH and VNC and then change port number for SSH
+
 VS Code and open it, Install the Remote - SSH extension
 ```python
 from picamera2 import Picamera2, Preview
@@ -73,7 +83,7 @@ im = picam2.capture_array()
 im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
 cv2.imwrite('file.png', im)void setup() {
 ```
-Connect the camera and use python to take a picture. 
+Connect the camera and use python code above to take a picture. 
 
 
 # Schematics 
