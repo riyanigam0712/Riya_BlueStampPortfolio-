@@ -46,11 +46,35 @@ For your second milestone, explain what you've worked on since your previous mil
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bZwton4v0_g?si=MIdvZNEX-xEZbMlO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For your first milestone, describe what your project is and how you plan to build it. You can include:
-- An explanation about the different components of your project and how they will all integrate together
-- Technical progress you've made so far
-- Challenges you're facing and solving in your future milestones
-- What your plan is to complete your project
+My project that is the smart glasses I am using a rasberry pi annd it's desognated caerma to perform object regontiiton. Right now I set up the raberry pi and got the camera to take pictures. 
+I accomplished my first milestone which entailed: 
+Insert the Micro-SD card into the USB reader and plug it into your computer
+Do the imaging for the sd card - duplicate their configured Raspberry Pi setups, back up their systems, or quickly deploy the same OS and software on multiple devices
+Enable (SSH (Secure Shell) lets you remotely control your Raspberry Pi from another computer without needing a monitor, keyboard, or mouse connected to the Pi) 
+Run terminal commands from my PC
+Edit code via VS Code
+Transfer files between Pi and my computer
+Insert the SD card into the Raspberry Pi., Put Raspberry Pi into the case
+Monitor Setup via OBS and Connect the Raspberry Pi to your PC using the HDMI capture card
+enable SSH and VNC and then change port number for SSH
+VS Code and open it, Install the Remote - SSH extension
+```python
+from picamera2 import Picamera2, Preview
+import time
+import cv2
+picam2 = Picamera2()
+camera_config = picam2.create_still_configuration(main={"size": (1920, 1080)},
+lores={"size": (640, 480)}, display="lores")
+picam2.configure(camera_config)
+#picam2.start_preview(Preview.QTGL) #Comment this out if not using desktop interface
+picam2.start()
+time.sleep(2)
+im = picam2.capture_array()
+im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
+cv2.imwrite('file.png', im)void setup() {
+```
+Connect the camera and use python to take a picture. 
+
 
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
