@@ -46,7 +46,8 @@ For your second milestone, explain what you've worked on since your previous mil
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bZwton4v0_g?si=MIdvZNEX-xEZbMlO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-My project that is the smart glasses I am using a rasberry pi and it's designated camera to perform object regontiiton and then attaching on to the glasses. For my milestone I Set up and connected to the Raspberry Pi to take a picture./
+My project that is the smart glasses I am using a rasberry pi and it's designated camera to perform object regontiiton and then attaching on to the glasses. For my milestone I Set up and connected to the Raspberry Pi to take a picture.
+
 This entailed: 
 
 Inserting the Micro-SD card into the USB reader and plug it into your computer
@@ -84,6 +85,9 @@ im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
 cv2.imwrite('file.png', im)void setup() {
 ```
 Connect the camera and use python code above to take a picture. 
+
+I encountered a lot of challenges for my first milestone which included the VS code side bar not working, and the imaging not working on my computer. 
+My next steps ...
 
 
 # Schematics 
