@@ -44,7 +44,7 @@ For your second milestone, explain what you've worked on since your previous mil
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
-<iframe width="560" height="315" src="[https://www.youtube.com/embed/CaCazFBhYKs](https://www.youtube.com/watch?v=bZwton4v0_g&list=PLe-u_DjFx7eui8dmPGji-0-slT8KydYv_&index=5)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bZwton4v0_g?si=p4GofzVWufIQ7frg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 For your first milestone, describe what your project is and how you plan to build it. You can include:
 - An explanation about the different components of your project and how they will all integrate together
@@ -91,8 +91,8 @@ To watch the BSE tutorial on how to create a portfolio, click here.
 
 # Starter Project
 
-<iframe width="560" height="315" src="[https://www.youtube.com/watch?v=_SmJnlM9aK0&list=PLe-u_DjFx7eui8dmPGji-0-slT8KydYv_&index=62=](https://youtu.be/_SmJnlM9aK0?si=2T_pKPWZSGm2vzHQ)"0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_SmJnlM9aK0?si=IGL8JqboFfbL3MUj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-The starter project I did was the Retro Arcade Console. It was a soldering heavy project that had many interesting steps and components. First I attached the USB socket (Serves as the power source) and the Dot matrix (the screen) with soldering. Then I attached many other important components like the capacitors, buzzer and power switch. After, I attached the keys and the timers and also added a battery option for power. The console has the classic game tetris and it was pretty good for such a small console. 
+The starter project I did was the Retro Arcade Console. It was a soldering heavy project that had many interesting steps and components. First I attached the USB socket (Serves as the power source) and the Dot matrix (the screen) with soldering. Then I attached many other important components like the capacitors, buzzer and power switch. After, I attached the keys and the timers and also added a battery option for power. The console has many classic games like tetris and spaceshooter and it was pretty fun for such a small console and simple project. 
 
 ![Headstone Image](IMG_9601.jpeg)
