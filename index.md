@@ -34,11 +34,33 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
+Update the Raspberry Pi
+sudo apt update
+sudo apt upgrade -y
+sudo apt install -y python3-pip
+sudo apt install --upgrade -y python3-setuptools
+
+Setup Virtual Environment
+sudo apt install python3.11-venv
+python -m venv env --system-site-packages
+source env/bin/activate
+source /home/riya/Documents/env/bin/activate
+Upgrade Script
+cd ~
+sudo pip3 install --upgrade adafruit-python-shell
+Wget    https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/raspi-blinka.py
+sudo python3 raspi-blinka.py
+
+Camera Testing
+libcamera-hello -t 0
+Speech Output
+- sudo apt install -y festival
+
+Install rpi-vision
+https://raw.githubusercontent.com/pytorch/hub/master/imagenet_classes.txt
+TensorFlow 2.x
+cd rpi-vision
+python3 tests/pitft_labeled_output.py --tflite
 
 # First Milestone
 
