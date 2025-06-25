@@ -1,16 +1,16 @@
 # Smart Glasses
-pair of glasses that do object recognition 
-You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
-```HTML 
-<!--- This is an HTML comment in Markdown -->
-<!--- Anything between these symbols will not render on the published site -->
-```
+
+
+<!---```HTML 
+ This is an HTML comment in Markdown
+Anything between these symbols will not render on the published site 
+``` -->
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
 | Riya N | Irvington High School | Electrical Engineering | Incoming Senior
 
-**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
+<!---**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**-->
 
 ![Headstone Image](RiyaN.jpeg)
   
@@ -26,43 +26,56 @@ You should comment out all portions of your portfolio that you have not complete
 
 
 
-# Second Milestone
-
+# Second Milestone - Object Recognition and Text-to-Speech Output
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tQPfRk3OY-E?si=J6-i2c21H-1Gcepx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-My Second Milestone was to get the object recognition to work with a premade library from Mobile new V2 and make sure the text to speech would produce an audio of what was recognized. 
+In this milestone, I set up object recognition using a prebuilt MobileNet V2 library and configured text-to-speech so the system can audibly announce its results.
 
-First I had to in the terminal:  
-**Update the Raspberry Pi
+1. Update the Raspberry Pi
+First, open the terminal and run the following commands to update your Raspberry Pi and install essential tools:
+```HTML 
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y python3-pip
+sudo apt install -y python3-pip - You might run in to some errors here, try removing the sudo command. Or try activating the environment first. 
 sudo apt install --upgrade -y python3-setuptools
+```
 
-Then I had to 
-Setup Virtual Environment - venv is to protect your system, and to have multiple incompatible projects running on the same system without any issues. Each project for example requires a different package version, so you have a venv for each project. You can experiment with different packages without venv. 
+2. Set Up a Virtual Environment
+A virtual environment (venv) is used to isolate project dependencies. This allows you to run different projects with conflicting package versions on the same system.
+```HTML 
 sudo apt install python3.11-venv
 python -m venv env --system-site-packages
 source env/bin/activate
-source /home/riya/Documents/env/bin/activate
+source /home/riya/Documents/env/bin/activate - This will be different for you, check your path to activate you environment  
+```
 
-Upgrade Script - Raspi-Blinka is a Python library that bridges the gap between CircuitPython and standard Python on Single Board Computers (SBCs) like the Raspberry Pi. It allows you to use CircuitPython libraries within a standard Python environment. It not completley needed but make thing much easier later on. I had a lot of problems installing this library with the Wget command so I had go to the github nd install everything manually. 
+3. Install Raspi-Blinka
+Raspi-Blinka is a Python library that bridges the gap between CircuitPython and standard Python, making it easier to use CircuitPython libraries on the Raspberry Pi. Although it’s not strictly required, it can be very helpful later on. 
+Note: I had a lot of problems installing this library with the Wget command so I had go to the github nd install everything manually.
+```HTML 
 cd ~
 sudo pip3 install --upgrade adafruit-python-shell
 Wget    https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/raspi-blinka.py
 sudo python3 raspi-blinka.py
+```
 
-Camera Testing -  WHen you put this command in the terminal, the cmaera live feed should activate. 
+Camera Testing -  Check if your camera is working properly by running:
+ ```HTML 
 libcamera-hello -t 0
-
-Speech Output - Fesival is a libary that will enable the text to speech conversion
+```
+Speech Output - Festival is a text-to-speech (TTS) engine that will enable spoken output for recognized objects:
+ ```HTML 
 - sudo apt install -y festival
-
-Install rpi-vision - This libary has
+```
+4. Install and Test rpi-vision
+Install rpi-vision - This library can identify these objects on the link below: 
 https://raw.githubusercontent.com/pytorch/hub/master/imagenet_classes.txt
-TensorFlow 2.x
+Install TensorFlow 2.x
+then use these commands in the terminal
+ ```HTML 
 cd rpi-vision
 python3 tests/pitft_labeled_output.py --tflite
+```
 
 # First Milestone
 
