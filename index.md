@@ -107,20 +107,20 @@ In my demo video you might have seen that I used a USB speaker instead of headph
 sudo raspi-config
 ```
 This command is helpful for many things in general like debugging and you will see a huge menu with many features. For our purpose, go to audio and switch the output from headphone jack to the USB speaker. Then you can run the test and check it out. Now when you put objects in front of the camera the audio will come out of the speaker. You can still adjust audio volume with alsamixer. 
-# First Milestone
+# First Milestone - Configure Raspberry Pi and Take a picture!
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bZwton4v0_g?si=MIdvZNEX-xEZbMlO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-My project that is the smart glasses I am using a rasberry pi and it's designated camera to perform object regontiiton and then attaching on to the glasses. For my milestone I Set up and connected to the Raspberry Pi to take a picture.
+My project involves creating smart glasses using a Raspberry Pi and its dedicated camera to perform object recognition. The camera will be attached to the glasses. As a milestone, I have set up and connected the camera to the Raspberry Pi and successfully captured a picture.
 
 This entailed: 
 
-Inserting the Micro-SD card into the USB reader and plug it into your computer
+Inserting the Micro-SD card into the USB reader and plug it into your computer.
 
-Do the imaging for the sd card which means duplicate their configured Raspberry Pi setups, back up their systems, or quickly deploy the same OS and software on multiple devices
+Do the imaging for the sd card. This means duplicate the configured Raspberry Pi setups, back up their systems, or quickly deploy the same OS and software on multiple devices.
 
-Enable (SSH (Secure Shell) which lets you remotely control your Raspberry Pi from another computer without needing a monitor, keyboard, or mouse connected to the Pi) 
+Enable (SSH/Secure Shell) which lets you remotely control your Raspberry Pi from another computer without needing a monitor, keyboard, or mouse connected to the Pi) 
 
 Run terminal commands from my PC
 
@@ -153,7 +153,7 @@ cv2.imwrite('file.png', im)void setup() {
 Connect the camera and use python code above to take a picture. 
 
 I encountered a lot of challenges for my first milestone which included the VS code side bar not working, and the imaging not working on my computer. 
-My next steps ...
+My next steps are to get object recognition on a live feed with text to speech output. 
 
 
 # Schematics 
