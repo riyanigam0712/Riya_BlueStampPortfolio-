@@ -16,15 +16,13 @@ You should comment out all portions of your portfolio that you have not complete
   
 # Final Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+<!--- <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-For your final milestone, explain the outcome of your project. Key details to include are:
+<!---For your final milestone, explain the outcome of your project. Key details to include are:
 - What you've accomplished since your previous milestone
 - What your biggest challenges and triumphs were at BSE
 - A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
+- What you hope to learn in the future after everything you've learned at BSE -->
 
 
 
@@ -32,30 +30,35 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tQPfRk3OY-E?si=J6-i2c21H-1Gcepx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-For my Second Milestone I had to:
-Update the Raspberry Pi
+My Second Milestone was to get the object recognition to work with a premade library from Mobile new V2 and make sure the text to speech would produce an audio of what was recognized. 
+
+First I had to in the terminal:  
+**Update the Raspberry Pi
 sudo apt update
 sudo apt upgrade -y
 sudo apt install -y python3-pip
 sudo apt install --upgrade -y python3-setuptools
 
-Setup Virtual Environment
+Then I had to 
+Setup Virtual Environment - venv is to protect your system, and to have multiple incompatible projects running on the same system without any issues. Each project for example requires a different package version, so you have a venv for each project. You can experiment with different packages without venv. 
 sudo apt install python3.11-venv
 python -m venv env --system-site-packages
 source env/bin/activate
 source /home/riya/Documents/env/bin/activate
-Upgrade Script
+
+Upgrade Script - Raspi-Blinka is a Python library that bridges the gap between CircuitPython and standard Python on Single Board Computers (SBCs) like the Raspberry Pi. It allows you to use CircuitPython libraries within a standard Python environment. It not completley needed but make thing much easier later on. I had a lot of problems installing this library with the Wget command so I had go to the github nd install everything manually. 
 cd ~
 sudo pip3 install --upgrade adafruit-python-shell
 Wget    https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/raspi-blinka.py
 sudo python3 raspi-blinka.py
 
-Camera Testing
+Camera Testing -  WHen you put this command in the terminal, the cmaera live feed should activate. 
 libcamera-hello -t 0
-Speech Output
+
+Speech Output - Fesival is a libary that will enable the text to speech conversion
 - sudo apt install -y festival
 
-Install rpi-vision
+Install rpi-vision - This libary has
 https://raw.githubusercontent.com/pytorch/hub/master/imagenet_classes.txt
 TensorFlow 2.x
 cd rpi-vision
@@ -143,10 +146,10 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 
 # Other Resources/Examples
-One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
-- [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
-- [Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
-- [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
+- [Helpful Slides for the Raspberry Pi](https://trashytuber.github.io/YimingJiaBlueStamp/](https://docs.google.com/presentation/d/1YA3rk9UH5X98TfvAGCCi-I7g4gzihHQl/edit?slide=id.p1#slide=id.p1))
+- [Raspberry Pi + Teachable Machine = Teachable Pi](https://learn.adafruit.com/teachable-machine-raspberry-pi-tensorflow-camera/use-raspberry-pi-camera/)
+- [Running TensorFlow Lite Object Recognition on the Raspberry Pi 4 or Pi 5](https://learn.adafruit.com/running-tensorflow-lite-on-the-raspberry-pi-4)
+- [Teachable Machine](https://trashytuber.github.io/YimingJiaBlueStamp/](https://docs.google.com/presentation/d/1YA3rk9UH5X98TfvAGCCi-I7g4gzihHQl/edit?slide=id.p1#slide=id.p1)](https://teachablemachine.withgoogle.com/))
 
 To watch the BSE tutorial on how to create a portfolio, click here.
 
