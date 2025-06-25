@@ -1,10 +1,6 @@
 # Smart Glasses
 
 These smart glasses will be able use object recognition to TTS(text to speech) to help a user in different ways in the real world. --- Draft project goal is changing
-<!---```HTML 
- This is an HTML comment in Markdown
-Anything between these symbols will not render on the published site 
-``` -->
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
