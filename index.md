@@ -1,6 +1,6 @@
 # Smart Glasses
 
-
+These smart glasses will be able use object recognition to TTS(text to speech) to help a user in different ways in the real world. --- Draft project goal is changing
 <!---```HTML 
  This is an HTML comment in Markdown
 Anything between these symbols will not render on the published site 
@@ -29,7 +29,7 @@ Anything between these symbols will not render on the published site
 # Second Milestone - Object Recognition and Text-to-Speech Output
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tQPfRk3OY-E?si=J6-i2c21H-1Gcepx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-In this milestone, I set up object recognition using a prebuilt MobileNet V2 library and configured text-to-speech so the system can audibly announce its results.
+In this milestone, I set up object recognition using a prebuilt MobileNet V2 library using Tensorflow and configured text-to-speech so the system can audibly announce its results.
 
 1. Update the Raspberry Pi
 First, open the terminal and run the following commands to update your Raspberry Pi and install essential tools:
@@ -46,12 +46,12 @@ A virtual environment (venv) is used to isolate project dependencies. This allow
 sudo apt install python3.11-venv
 python -m venv env --system-site-packages
 source env/bin/activate
-source /home/riya/Documents/env/bin/activate - This will be different for you, check your path to activate you environment  
+source /home/riya/Documents/env/bin/activate - This will be different for you, check your path for your environment  
 ```
 
 3. Install Raspi-Blinka
 Raspi-Blinka is a Python library that bridges the gap between CircuitPython and standard Python, making it easier to use CircuitPython libraries on the Raspberry Pi. Although it’s not strictly required, it can be very helpful later on. 
-Note: I had a lot of problems installing this library with the Wget command so I had go to the github nd install everything manually.
+Note: I had a lot of problems installing this library with the Wget command so I had go to the github and install every commmand manually.
 ```HTML 
 cd ~
 sudo pip3 install --upgrade adafruit-python-shell
@@ -63,20 +63,54 @@ Camera Testing -  Check if your camera is working properly by running:
  ```HTML 
 libcamera-hello -t 0
 ```
+if that does not work:
+ ```HTML 
+libcamera-hello --list-cameras : to check if camera is there
+sudo apt upgrade libcamera-dev libcamera-apps
+```
 Speech Output - Festival is a text-to-speech (TTS) engine that will enable spoken output for recognized objects:
  ```HTML 
 - sudo apt install -y festival
 ```
-4. Install and Test rpi-vision
-Install rpi-vision - This library can identify these objects on the link below: 
-https://raw.githubusercontent.com/pytorch/hub/master/imagenet_classes.txt
-Install TensorFlow 2.x
-then use these commands in the terminal
+
+ Another command needed for Tensorflow  
+ ```HTML 
+sudo apt install -y python3-numpy python3-pillow python3-pygame
+```
+Install rpi-vision - This library can identify these objects on the link below: https://raw.githubusercontent.com/pytorch/hub/master/imagenet_classes.txt
+ ```HTML 
+cd ~
+source env/bin/activate
+git clone --depth 1 https://github.com/adafruit/rpi-vision.git if this gitbub does not work replace with https://github.com/anwesha-g/tensorflow_rpi_objdet
+cd rpi-vision
+pip3 install -e .
+```
+
+Install TensorFlow 2.x - use the command all at once
+ ```HTML 
+RELEASE=https://github.com/PINTO0309/Tensorflow-bin/releases/download/v2.15.0.post1/tensorflow-2.15.0.post1-cp311-none-linux_aarch64.whl
+CPVER=$(python --version | grep -Eo '3\.[0-9]{1,2}' | tr -d '.')
+pip install $(echo "$RELEASE" | sed -e "s/cp[0-9]\{3\}/CP$CPVER/g")
+```
+then use these commands in the terminal to start the program
  ```HTML 
 cd rpi-vision
 python3 tests/pitft_labeled_output.py --tflite
 ```
+From this point, you can use either OBS or TigerVNC to view a camera feed that displays both the frame rate and the Raspberry Pi’s temperature. If you hold an object in front of the Pi Camera (common examples that worked for me were a mouse, a computer keyboard, and a cellular phone )it should be recognized by the system. You can also refer to the list I shared earlier for other objects it might detect. Overall, it works, but it can be a bit janky at times.
 
+An extra thing for Speech Output that I did: 
+Orginally I was using headphones with the headphone jack. If you want to test the speech output. Plug in your headphones or use bluetooth headphones and use:
+ ```HTML 
+echo "This is a test" | festival --tts
+```
+For me the volume was really low when I was testing with the command above. I had to use a another command called alsamixer. Put the word alsamixer in the terminal. A menu will come up to adjust the volume. 
+
+In my demo video you might have seen that I used a USB speaker instead of headphones. This was becuase I wanted to display to everyone the speech output. To do this plug the Bluetooth speaker into the Raspberry Pi and use the command:
+ ```HTML
+sudo raspi-config
+```
+This command is helpful for many things in general like debugging and you will see a huge menu with many features. For our purpose, go to audio and switch the output from headphone jack to the USB speaker. Then you can run the test and check it out. Now when you put objects in front of the camera the audio will come out of the speaker. You can still adjust audio volume with alsamixer. 
 # First Milestone
 
 
@@ -127,9 +161,9 @@ My next steps ...
 
 
 # Schematics 
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
+<!---Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. -->
 
-# Code
+<!---# Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
 ```c++
@@ -143,11 +177,11 @@ void loop() {
   // put your main code here, to run repeatedly:
 
 }
-```
+```-->
 
 # Bill of Materials
-Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
-Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
+<!---Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
+Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. -->
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
@@ -159,17 +193,21 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 
 # Other Resources/Examples
-- [Helpful Slides for the Raspberry Pi](https://trashytuber.github.io/YimingJiaBlueStamp/](https://docs.google.com/presentation/d/1YA3rk9UH5X98TfvAGCCi-I7g4gzihHQl/edit?slide=id.p1#slide=id.p1))
+- [Helpful Slides for the Raspberry Pi setup](https://trashytuber.github.io/YimingJiaBlueStamp/](https://docs.google.com/presentation/d/1YA3rk9UH5X98TfvAGCCi-I7g4gzihHQl/edit?slide=id.p1#slide=id.p1))
 - [Raspberry Pi + Teachable Machine = Teachable Pi](https://learn.adafruit.com/teachable-machine-raspberry-pi-tensorflow-camera/use-raspberry-pi-camera/)
 - [Running TensorFlow Lite Object Recognition on the Raspberry Pi 4 or Pi 5](https://learn.adafruit.com/running-tensorflow-lite-on-the-raspberry-pi-4)
 - [Teachable Machine](https://trashytuber.github.io/YimingJiaBlueStamp/](https://docs.google.com/presentation/d/1YA3rk9UH5X98TfvAGCCi-I7g4gzihHQl/edit?slide=id.p1#slide=id.p1)](https://teachablemachine.withgoogle.com/))
 
-To watch the BSE tutorial on how to create a portfolio, click here.
+<!---To watch the BSE tutorial on how to create a portfolio, click here.-->
 
 # Starter Project
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_SmJnlM9aK0?si=IGL8JqboFfbL3MUj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-The starter project I did was the Retro Arcade Console. It was a soldering heavy project that had many interesting steps and components. First I attached the USB socket (Serves as the power source) and the Dot matrix (the screen) with soldering. Then I attached many other important components like the capacitors, buzzer and power switch. After, I attached the keys and the timers and also added a battery option for power. The console has many classic games like tetris and spaceshooter and it was pretty fun for such a small console and simple project. 
+The starter project I worked on was the Retro Arcade Console. It was a soldering-heavy project with many interesting steps and components.
+
+First, I soldered the USB socket (to serve as the power source) and the dot-matrix display (for the screen). After that, I attached other essential components, including the capacitors, the buzzer, and the power switch.
+
+Next, I added the keys, timers, and a battery option to provide an alternative power source. The console came preloaded with many classic games, such as Tetris and Space Shooter, making it a fun and rewarding project despite its small size and simple design.
 
 ![Headstone Image](IMG_9601.jpeg)
