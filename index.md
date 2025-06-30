@@ -1,6 +1,6 @@
-# Smart Glasses
+# Resistor Glasses
 
-These smart glasses will be able use object recognition to TTS(text to speech) to help a user in different ways in the real world. --- Draft project goal is changing
+When I was doing a engineering project at my high school involving a lot of electronic components and a breadboards I had to use 4 resistores. My teacher told me to check the cabinets in the back of the classroom and when I opened it oh my god it was a mess. Everything spilled out of the closet, resistor were everywhere and mixed up. Some resitor were with wrong labels and in the wrong packets. It was pretty stressful to find the resistor and putting in to the online calculator to guess what it might be. 
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
@@ -12,6 +12,7 @@ These smart glasses will be able use object recognition to TTS(text to speech) t
   
 # Final Milestone
 
+My final Milestone is making the glasses look cool and being able identify different types of resistors.
 <!--- <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
 
 <!---For your final milestone, explain the outcome of your project. Key details to include are:
