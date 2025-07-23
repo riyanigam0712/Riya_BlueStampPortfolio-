@@ -16,7 +16,7 @@ Originally, my project was focused on building smart glasses, but for modificati
 # Final Milestone
 
 My final Milestone is making the glasses look cool and being able identify different types of resistors.
- <iframe width="560" height="315" src="[https://www.youtube.com/embed/F7M7imOVGug](https://www.youtube.com/watch?v=R_G0wD6l74A&list=PLe-u_DjFx7eui8dmPGji-0-slT8KydYv_&index=130)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/R_G0wD6l74A?si=lyi4LIUGegrYVNie" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 For my third milestone, I decided to move away from working with the glasses and instead build something more hands-on and meaningful: a resistor detector. Here’s a step-by-step breakdown of the entire process and how I got it working.
 
